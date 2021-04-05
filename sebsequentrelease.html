@@ -1,0 +1,1947 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="RMS - Finance Dept. - UP Govt.">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Eczar&family=Khula&family=Martel&display=swap" rel="stylesheet">
+    <!-- UI Libs -->
+    <link href="./tabler/css/tabler.min.css" rel="stylesheet" />
+    <link href="./tabler/css/tabler-flags.min.css" rel="stylesheet" />
+    <link href="./tabler/css/tabler-payments.min.css" rel="stylesheet" />
+    <link href="./tabler/css/tabler-vendors.min.css" rel="stylesheet" />
+    <link href="./tabler/css/demo.min.css" rel="stylesheet" />
+    <!--  -->
+
+    <!-- Vendor Libs CSS -->
+    <link rel='stylesheet' href='https://cdn.form.io/formiojs/formio.full.min.css'>
+
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <!-- Core build with no theme, formatting, non-essential modules -->
+   <!--  <link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">
+    <script src="//cdn.quilljs.com/1.3.6/quill.core.js"></script> -->
+
+
+    <link rel="stylesheet" href="css/css-loader.css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+  </head>
+
+  <body>
+
+     <div class="loaderBox loaderBox-default " id="loadBox" data-text="लोड हो रहा है.."></div>
+
+    <div class="page">
+
+      <div id="header"></div>
+      <div id="nav"></div>
+
+
+
+      <div class="content">
+        <div class="container-xl">
+          <div class="row row-cards">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-12 col-xl-8 rms-form-card">
+                  <form id="releaseForm" class="RMS-form" data-requesttype='firstrelease' style="margin-bottom: 100px;">
+                    
+                      <div class="col-12" style="padding-top: 20px;">
+                        <h1 style="margin-bottom: 20px; text-align: center; text-decoration: underline; font-weight: bold ;"  class="form-title" id="page-title"> प्रथम किश्त </h1>
+
+
+                        <!-- File Details to Grant -->
+                        <!--  <div class="row" style="text-align: left;">
+                           <h2> Heading 1 </h2>
+                         </div> -->
+                          <div class="row">
+                            <div class="col-4">
+                            </div>
+                        
+                           </div>
+                           <div class="row">
+
+                             <div class="col-4">
+                                <div class="form-label p-20">वित्तीय वर्ष </div>
+                                <select class="form-select" name="finyear" id="finyear">
+                                   <option></option>
+                                   <!--  <option value="20212020">2021 - 2022</option>   -->
+                                   <option value="20202021">2020 - 2021</option>
+                                   <option value="20212022">2021 - 2022</option>
+                                </select>
+                             </div>
+
+                             <div class="col-4">
+                                <label class="form-label p-20">प्रशासकीय विभाग की पत्रावली संख्या </label>
+                                <input type="text"  name="department_file_num" class="form-control mb-2" id="department_file_num">
+                             </div>
+                             <div class="col-4">
+                                <label class="form-label p-20">प्रशासकीय विभाग की पत्रावली दिनांक </label>
+                                <!-- <input type="text" class="form-control mb-2" id="department_file_date" autocomplete="off"> -->
+
+                                <input type="date" class="form-control" id="department_file_date" name="department_file_date" placeholder="Select a date" autocomplete="off">
+                             </div>
+                            </div>
+                            <div class="row"> 
+                             <div class="col-6">
+                                <div class="form-label p-20">प्रशासकीय विभाग </div>
+                                <select class="form-select" name="department" id="department">
+                                </select>
+                              </div>
+
+                               <div class="col-6">
+                             <div class="form-label p-20">अनुदान संख्या </div>
+                             <select class="form-select" name="grantCode" id="grantCode">
+                                <option></option>
+                             </select>
+                            </div>
+                              
+
+                             
+                          </div>
+
+                          <div class="row">
+                            
+                           
+                          </div>
+
+                          <hr style="margin-top: 15px; ">
+                          <!-- <div class="row " style="text-align: left; margin-top: 30px;">
+                           <h2 style="text-decoration: underline; font-size: 22px;"> Heading 1 </h2>
+                         </div> -->
+                          <!-- Scheme Finder -->
+                          <div class="row" id="schemeComponent">
+                             
+                            
+                                <div class="col-4 form-label p-20">
+                                  मुख्य लेखाशीर्षक
+                                  <select class="form-select" id="scheme_major_head" name="scheme_major_head">
+                                     <option></option>
+                                  </select>
+                               </div>
+                                <div class="col-4 form-label p-20">
+                                    उप मुख्य लेखाशीर्षक
+                                   <select class="form-select" id="scheme_submajor_head" name="scheme_submajor_head">
+                                      <option></option>
+                                   </select>
+                                </div>
+                                <div class="col-4 form-label p-20">
+                                   लघु शीर्षक 
+                                   <select class="form-select" id="scheme_minor_head" name="scheme_minor_head">
+                                      <option></option>
+                                   </select>
+                                </div>
+                                <div class="col-12 form-label p-20">
+                                   उप शीर्षक - विस्तृत शीर्षक
+                                   <select class="form-select" id="scheme_sub_detailed_head" name="scheme_sub_detailed_head">
+                                      <option></option>
+                                   </select>
+                                </div>
+                                <!-- <div class="col-4 form-label p-20">
+                                   मानक मद
+                                   <select class="form-select" id="scheme_object_code">
+                                      <option></option>
+                                   </select>
+                                </div> -->
+
+                              
+                             
+                           
+                             <!--    <div class="col-5 p-20">
+                                   <label class="form-label"> प्र० विभाग के अनुसार बजट प्रावधान <br />(₹ लाख में) </label>
+                                   <input type="text" class="form-control mb-2" id="budgetProvisioned">
+                                </div>
+                                <div class="col-5 p-20">
+                                   <label class="form-label">डेटाबेस के अनुसार बजट प्रावधान <br />(₹ लाख में) </label>
+                                   <input type="text" class="form-control mb-2" disabled="true" id="budgetProvisionedFetched">
+                                </div>
+                                 <div class="col-2 p-20">
+
+                                      <div id="budgetProvisionedCheckBox">
+                                        
+                                        <div class="list-true">
+                                          
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+                                        </div>
+
+                                        <div class="list-false">
+                                        
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-false" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                                        </div>
+
+                                      </div>
+
+                                   </div> -->
+                             
+                             <div>
+                             </div>
+                          </div>
+
+
+                          <!-- Central State Share %-->
+
+                          <div class="row">
+                            <div class="col-1 p-20">
+                           </div>
+                            <div class="col-4 p-20" style="text-align: center;">
+                              
+                              <label class="form-label">प्र० विभाग के अनुसार वित्तीय पोषण </label>
+
+                            </div>
+
+                             <div class="col-1 p-20">
+                           </div>
+
+                             <div class="col-4 p-20" style="text-align: center;">
+                               <label class="form-label"> बजट डेटाबेस के अनुसार</label>
+                             
+                             </div>
+
+                          </div>
+                          <div class="row">
+                            <div class="col-1">
+                           </div>
+                             <div class="col-2 ">
+                                <label class="form-label"> केन्द्रांश %</label>
+                                <input type="number" name="centralGovernmentSharePercent" class="form-control mb-2" id="centralGovernmentSharePercent">
+                             </div>
+                             <div class="col-2 ">
+                                <label class="form-label">राज्यांश %</label>
+                                <input type="number" name="stateGovernmentSharePercent" class="form-control mb-2" id="stateGovernmentSharePercent">
+                             </div>
+                            
+                             <div class="col-1">
+                             </div>
+
+                             <div class="col-2">
+                                <label class="form-label"> केन्द्रांश %</label>
+                                <input type="text" class="form-control mb-2" id="centralGovernmentSharePercentFetched" name="centralGovernmentSharePercentFetched" disabled="true">
+                             </div>
+                             <div class="col-2">
+                                <label class="form-label">राज्यांश %</label>
+                                <input type="text" class="form-control mb-2" id="stateGovernmentSharePercentFetched" name="stateGovernmentSharePercentFetched" disabled="true">
+                             </div>
+                              <div class="col-2">
+
+                                      <div id="sharePercentCheckBox">
+                                        
+                                        <div class="list-true">
+                                          
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+                                        </div>
+
+                                        <div class="list-false">
+                                        
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-false" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                                        </div>
+
+                                      </div>
+
+                                   </div>
+                          </div>
+
+                          <div class="row">
+
+                              <div class="col-12"> 
+                                  <a href="#" class="btn btn-outline-primary w-100 btn-bold" id="launchObjectSelector" style="margin-top: 50px;"  data-micromodal-trigger="objectSelectorContainer">
+                                      मानक मद जोड़ें 
+                                    </a></div>
+
+                          </div>
+
+                          <hr style="margin-top: 15px; ">
+                          <!-- RBI Letter Checker -->
+                           <div class="row" id="RBICheckContainer">
+                             <!-- <div class="col-12">
+                                <div class="form-label p-20"> क्या भारत सरकार के किसी पत्र द्वारा धनराशि प्राप्त होना दर्शाया गया है ?</div>
+                                <select class="form-select" id="RBILetter">
+                                   <option></option>
+                                   <option value="Yes">हाँ</option>
+                                   <option value="No">नहीं</option>
+                                </select>
+                             </div> -->
+
+                               <div class="row">
+                                <div class="col-8">
+                                <div class="form-label p-20"> क्या भारत सरकार के किसी पत्र द्वारा धनराशि प्राप्त होना दर्शाया गया है ?</div>
+                                </div>
+
+                                <div class="col-4 p-20">
+                                   <div>
+                                    <label class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="rbiLetterBool" value="Yes">
+                                      <span class="form-check-label">Yes</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="rbiLetterBool" value="No">
+                                      <span class="form-check-label">No</span>
+                                    </label>
+                                  </div>
+
+                                </div>
+
+                                
+                             </div>
+
+
+                            
+
+
+                             <div class="row" style="display: none;" id="RBILetterFinder">
+                                <div class="col-3">
+                                   <label class="form-label p-20">केंद्र सरकार का पत्र दिनांक (MM/DD/YYYY)</label>
+                                  <!--  <div class="input-icon"> -->
+                                      <!-- <span class="input-icon-addon">
+                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+                                            <line x1="16" y1="3" x2="16" y2="7"></line>
+                                            <line x1="8" y1="3" x2="8" y2="7"></line>
+                                            <line x1="4" y1="11" x2="20" y2="11"></line>
+                                            <line x1="11" y1="15" x2="12" y2="15"></line>
+                                            <line x1="12" y1="15" x2="12" y2="18"></line>
+                                         </svg>
+                                      </span> -->
+                                    <!--   <input class="form-control" placeholder="Select a date" id="RBILetterDate" value="2020-12-30"> -->
+
+                                      <input type="date" class="form-control" id="RBILetterDate" name="RBILetterDate" placeholder="Select a date">
+                                   <!-- </div> -->
+                                </div>
+                                <div class="col-7 p-20">
+                                   <label class="form-label">केंद्र सरकार के विभाग का नाम <br/>.</label>
+                                   <select class="form-select" name="RBILetterDepartment" id="RBILetterDepartment">
+                                   <option></option>
+                                 </select>
+                                </div>
+
+                                 <div class="col-2 p-20">
+
+                                   <!--  <a href="#" class="btn btn-outline-primary w-100" id="findLetterAction" style="margin-top: 50px;">
+                                      Khojein
+                                    </a> -->
+
+                                    <a href="#" class="btn btn-outline-primary w-100" id="findLetterAction" style="margin-top: 50px;"   data-micromodal-trigger="rbiContainer">
+                                      खोजें 
+                                    </a>
+
+                                   
+
+                                  </div>
+                             
+                             <div class="row" style="display: none; margin-top: 30px;" id="RBILetterList">
+
+                             
+                             </div>
+                          </div>
+                        </div>
+
+
+                     <!--    <hr style="margin-top: 15px; ">
+
+
+                      -->
+
+                          <!-- Object Codes Container -->
+                         
+
+                          <hr style="margin-top: 15px;  margin-bottom: 30px;">
+                            
+                          <!-- Type of Plan -->
+                           <div class="row">
+                             <div class="col-4">
+                                <div class="form-label p-20"> योजना का प्रकार </div>
+                           
+                             </div>
+
+                             <div class="col-8">
+                                   <select class="form-select" id="typeOfPlan" name="typeOfPlan">
+                                   <option></option>
+                                   <option value="अन्य" data-plantype="other">अन्य</option>
+                                   <option value="निर्माण" data-plantype="construction">निर्माण</option>
+                                </select>
+
+                             </div>
+
+                          </div>
+
+                          <!-- Type of Plan : Construction -->
+                          <div class="row" id="typeOfPlanNirmaan" style="display: none;">
+                             <div class="col-6">
+                                <label class="form-label p-20">प्राक्कलन की धनराशि (₹ लाख में)</label>
+                                <input type="number" name="estimateAmount" class="form-control mb-2" id="estimateAmount">
+                             </div>
+                             <!-- Code added by kav -->
+                             <div class="col-6">
+                              <label class="form-label p-20">मूल स्वीकृति / वर्ष (₹ लाख में)</label>
+                              <input type="number" name="originalAcceptance" class="form-control mb-2" id="originalAcceptance">
+                           </div>
+                           <div class="col-6">
+                            <label class="form-label p-20">वित्तीय एवं भौतिक प्रगति</label>
+                            <input type="number" name="estimateAmount" class="form-control mb-2" id="estimateAmount">
+                           </div>
+                         <div class="col-6">
+                          <label class="form-label p-20">उपयोगिता प्रमाण - पत्र (₹ लाख में)</label>
+                          <input type="number" name="materialProgress" class="form-control mb-2" id="materialProgress">
+                         </div>
+                         <div class="col-6">
+                        <label class="form-label p-20">भूमि उप्लब्धता की स्थिति</label>
+                        <input type="number" name="landAvailability" class="form-control mb-2" id="landAvailability">
+                        </div>
+                        <div class="col-6">
+                      <label class="form-label p-20">उच्च विशिष्टियों की स्थिति</label>
+                      <input type="number" name="highqualityStatus" class="form-control mb-2" id="highqualityStatus">
+                      </div>
+                      <div class="col-6">
+                        <label class="form-label p-20">कार्यदायी संस्था</label>
+                        <input type="number" name="executiveBody" class="form-control mb-2" id="executiveBody">
+                      </div>
+                      <div class="col-6">
+                        <label class="form-label p-20">बजटीय व्यवस्था के सापेक्ष अवशेष</label>
+                        <input type="number" name="budgetarySystem" class="form-control mb-2" id="budgetarySystem">
+                      </div>
+                   
+                      </form>
+                   <!-- Code end by kav -->
+                             <div class="col-6">
+                                <label class="form-label p-20">क्या प्रशासकीय विभाग में प्रौद्योगिकी खण्ड है?</label>
+                                <select class="form-select" id="engineeringWing" name="engineeringWing">
+                                   <option></option>
+                                   <option value="Yes">हाँ</option>
+                                   <option value="No">नहीं</option>
+                                </select>
+                             </div>
+                             <div class="col-6">
+                                <label class="form-label p-20">प्राक्कलन किस स्तर से अनुमोदित किया गया है?</label>
+                                <select class="form-select" id="estimateApprovedBy" name="estimateApprovedBy">
+                                   <option> </option>
+                                   <option value="विभाग">विभाग </option>
+                                   <option value="विभाग प्रौद्योगिकी खण्ड">विभाग प्रौद्योगिकी खण्ड</option>
+                                   <option value="PFAD">PFAD</option>
+                                   <option value="EFC">EFC</option>
+                                </select>
+                             </div>
+                             <div class="col-6">
+                                <label class="form-label p-20">प्राक्कलन अनुमोदित करने का सक्षम स्तर</label>
+                                <input type="text" class="form-control mb-2" disabled="true" id="estimateToBeApprovedBy" name="estimateToBeApprovedBy">
+                             </div>
+                             <!--   <div class="col-6">
+                                <label class="form-label p-20">योजना किस स्तर से अनुमोदित की गई है?</label>
+                                 <select class="form-select" id="projectApprovedBy">  
+                                    <option> </option>   
+                                        <option value="विभाग मंत्री">विभाग मंत्री </option>    
+                                        <option value="वित्त मंत्री एवं विभाग मंत्री">वित्त मंत्री एवं विभाग मंत्री</option>
+                                        <option value="मुख्यमंत्री, वित्त मंत्री एवं विभाग मंत्री">मुख्यमंत्री, वित्त मंत्री एवं विभाग मंत्री</option> 
+                                        <option value="मंत्रिमंडल">मंत्रिमंडल</option>     
+                                        </select>
+                                </div>  
+                                
+                                <div class="col-6">
+                                   <label class="form-label p-20">योजना अनुमोदित करने का सक्षम स्तर</label>
+                                    <input type="text" class="form-control mb-2" disabled="true" id="projectToBeApprovedBy">
+                                    
+                                </div> -->
+                          </div>
+
+                           <hr style="margin-top: 15px;  margin-bottom: 30px;">
+                          <!-- Draft Availability -->
+                            <div class="row">
+                               <!-- <div class="col-12">
+                                  <label class="form-label p-20">क्या पत्रावली में आलेख उपलब्ध है? </label>
+                                  <select class="form-select" id="draftCopyAvailable">
+                                     <option></option>
+                                     <option value="Yes">हाँ</option>
+                                     <option value="No">नहीं</option>
+                                  </select>
+                               </div> -->
+
+
+                               <div class="row">
+                                <div class="col-8">
+                                <div class="form-label p-20"> क्या पत्रावली में आलेख उपलब्ध है?</div>
+                                </div>
+
+                                <div class="col-4 p-20">
+                                   <div>
+                                    <label class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="draftCopyAvailable" value="Yes">
+                                      <span class="form-check-label">Yes</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="draftCopyAvailable" value="No">
+                                      <span class="form-check-label">No</span>
+                                    </label>
+                                  </div>
+
+                                </div>
+
+                                
+                             </div>
+                            </div>
+
+
+
+
+                            <!-- Draft Generator  -->
+                          <div class="row" id="draftGeneratorModule" style="display: none;">
+                             <div class="col-4">
+                                <label class="form-label p-20"> प्रशासकीय विभाग की स्वीकृति संख्या </label>
+                                <input type="text" class="form-control mb-2" id="department_sanction_num" name="department_sanction_num">
+                             </div>
+                             <div class="col-4">
+                                <label class="form-label p-20"> सक्षम स्तर द्वारा अनुमोदन की दिनांक </label>
+                              <!--   <input type="text" class="form-control mb-2" id="department_approval_date">
+ -->
+                                 <input type="date" class="form-control" id="department_approval_date" name="department_approval_date" placeholder="Select a date" autocomplete="off">
+
+
+                             </div>
+                             <div class="col-4">
+                                <label class="form-label p-20">सक्षम स्तर </label>
+                                <input type="text" class="form-control mb-2" id="approval_authority" name="approval_authority">
+                             </div>
+                          </div>
+
+                         <!--  <hr style="margin-top: 20px;  "> -->
+                          <hr style="margin-top: 5px;  margin-bottom: 20px;">
+                          <!-- Comments -->
+                            <div class="row">
+                               <div class="col-12">
+                                  <label class="form-label p-20">वित्त विभाग की टिप्पणी</label>
+                                  <textarea class="form-control" name="comments" id="comments" rows="3" placeholder="" ></textarea>
+                               </div>
+                            </div>
+
+
+                            <!--  <hr style="margin-top: 20px;  "> -->
+                          <hr style="margin-top: 5px;  margin-bottom: 20px;">
+                          <!-- Terms and Conditions -->
+                          <div class="row">
+                            <div class="col-10"> <label class="form-label p-20">नियम व शर्ते </label></div>
+                            <div class="col-2">
+                              <div class="col-12 p-20">
+                                   <button type="button" class="btn btn-outline-primary w-100 btn-bold" data-micromodal-trigger="termsSelectorContainer">
+                                   चुने
+                                   </button>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row">
+
+                             <div class="col-12">
+                                
+                                <textarea class="form-control" name="standardNoting" id="standardNoting" rows="6" placeholder="" style="padding-bottom: 50px; padding-top: 10px;font-size: 16px;"></textarea>
+                                <!-- <div id="standardNoting" name="standardNoting" style="padding-bottom: 50px; padding-top: 10px;font-size: 16px;"> -->
+                                </div>
+                                
+                             </div>
+                          </div>
+
+                          <!-- <hr style="margin-top: 20px;  "> -->
+                          <hr style="margin-top: 5px;  margin-bottom: 20px;">
+
+                          
+
+                           <!-- Note generator button -->   
+                            <div class="row">
+                              <div class="col-12 p-20">
+
+                                <a href="#" class="btn btn-outline-primary w-100 btn-bold" id="generateNote">
+                                  नोट जनरेट करें
+                                </a>
+
+                              </div>
+                            </div>
+
+                      </div>
+                  </form>
+                </div>
+                <div class="col-sm-3"></div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="row" style="margin-top: 100px; margin-bottom: 600px; padding-top: 100px;" id="noteRow">
+              <div class="col-2"></div>
+              <div class="col-8" id="noteColumn">
+                <div class="row">
+                  <div class="col-12 p-20">
+
+                    <a href="#" class="btn btn-outline-primary w-100 btn-bold" id="copyNote2" style="margin-bottom: 30px;">
+                      नोट कॉपी करें
+                    </a>
+
+                  </div>
+
+
+                </div>
+
+                <div class="card" id="noteCard">
+                  <div class="card-status-top bg-primary"></div>
+                  <div class="card-body">
+                    <h3 class="card-title" id="noteTitle" style="text-align: center; font-size: 20px;">
+
+                    </h3>
+                    <p id="noteText">
+
+
+                    </p>
+                  </div>
+                </div>
+
+
+
+                <div class="row">
+                  <div class="col-12 p-20">
+
+                    <a href="#" class="btn btn-outline-primary w-100" id="copyNote">
+                      नोट कॉपी करें
+                    </a>
+
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </div>
+        <div id="userTaskContainer"> </div>
+
+
+
+
+
+        <div id="generatedText"></div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+<!-- Modal for Adding object rows  Object code table object table Object selector-->
+
+    <div class="modal micromodal-slide" id="objectSelectorContainer" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="objectSelectorContainer-title">
+          <header class="modal__header modal-narrow-header" >
+
+
+            <h2 class="modal__title" id="objectSelectorContainer-title" >
+            <!--   कृपया सम्बंधित पत्र (एक / अधिक) चुनें  -->
+
+
+            </h2>
+            <span style="font-size: 14px;">
+              पत्रावली में  जिन जिन मानक मदों का वर्णन है उन मानक मदों की ही जानकारी भरें  | नोट में निम्न मानक मदों में से उन्ही को जोड़ा जायेगा जिनकी कुल मांगी गयी धनराशि 0 से अधिक है | <br/>
+              निम्न सूचि में वही मानक मद हैं जिनका बजट प्राविधान 0 से अधिक है 
+            </span>
+
+            
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content" id="objectSelectorContainer-content">
+              
+
+                <div class="col-12" id="object-codes-container">
+                             <div class="col-12" id="object-codes-box">
+                                   
+                                    <div class="table-responsive">
+                                       <table class="table card-table table-vcenter datatable">
+                                          <thead>
+                                             <tr>
+                                                
+                                                <th class="inner-table-header col-2">मानक मद </th>
+                                                <!-- Changes made by kav -->
+                                                <th class=" inner-table-header col-1"><div class="table-header">प्र० विभाग के अनुसार पूर्व में जारी स्वीकृतियां (₹ लाख में)</div>
+                                                  <hr>
+                                                  <!-- Changes made by kav -->
+                                                  <div class="table-header">डेटाबेस के अनुसार पूर्व में जारी स्वीकृतियां (₹ लाख में) </div>
+                                                </th>
+
+                                                 <!--  <th class=" inner-table-header "><div class="table-header">डेटाबेस के अनुसार बजट प्रावधान (₹ लाख में)</div>
+                                                </th> -->
+
+                                                <th class=" inner-table-header col-1" >
+                                                  <!-- Match -->
+                                                </th>
+
+                                                <th class=" inner-table-header col-1" data-sebsequentComponent="true"> <div class="table-header">वित्त विभाग द्वारा पहले जारी किया हुआ राशि (₹ लाख में) </div>
+                                                  <hr>
+                                                  <div class="table-header">डेटाबेस के अनुसार वित्त विभाग द्वारा पहले जारी किया हुआ राशि (₹ लाख में) </div>
+
+
+                                                </th>
+
+                                               <!--  <th class=" inner-table-header  ">डेटाबेस के अनुसार वित्त विभाग द्वारा पहले जारी किया हुआ राशि (₹ लाख में) </th> -->
+
+                                                 <th class=" inner-table-header col-1 " data-sebsequentComponent="true">
+                                                  <!-- Match -->
+                                                </th>
+
+                                                <th class=" inner-table-header col-1 " data-sebsequentComponent="true"><div class="table-header">कुल व्यय
+                                                  (₹ लाख में) </div> 
+                                                  <hr>
+                                                  <div class="table-header">डेटाबेस के अनुसार कुल व्यय
+(₹ लाख में) </div> 
+
+
+                                                </th>
+
+                                                <!-- <th class=" inner-table-header ">डेटाबेस के अनुसार कुल व्यय
+(₹ लाख में) </th> -->
+
+ <th class=" inner-table-header col-1" data-sebsequentComponent="true">
+                                                  <!-- Match -->
+                                                </th>
+
+                                                 <th class=" inner-table-header col-1" data-sebsequentComponent="true">डेटाबेस के अनुसार स्वीकृति हेतु उपलब्ध अवशेष धनराशि (₹ लाख में) </th>
+
+
+                                                <!-- <th class="inner-table-header col-3"> </th> -->
+                                                <!-- Code added by kav -->
+                                                <th class="inner-table-header col-3 " ><div class="table-header"> प्र० विभाग के अनुसार अद्यतन व्यय (₹ लाख में) </div> 
+                                                  <hr>
+                                                  <div class="table-header">डेटाबेस के अनुसार अद्यतन व्यय (₹ लाख में)</div>
+</th>
+                                                
+                                                
+                                             </tr>
+                                          </thead>
+                                          <tbody id="objectTableBody">
+                                           
+
+                               <tr class="budget-row" id="budget-row-0" data-sebsequentRelease="false" style="display:none;">
+                                   <td class=" ">
+                                      <input class="form-control list-objectCode" disabled="true">      
+                                   </td>
+
+                                   <td class="">
+                                      <input type="text" class="form-control mb-2 list-budgetProvisioned">
+                                   <!-- </td>
+                                   <td class=""> -->
+                                    <hr>
+                                      <input type="text" class="form-control mb-2 list-budgetProvisionedFetched" disabled="true">
+                                   </td>
+
+                                     <td class="">
+
+                                      <div class="list-budgetProvisionedCheckBox">
+                                        
+                                        <div class="list-true">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+                                        </div>
+
+                                        <div class="list-false">
+                                        
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-false" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                                        </div>
+
+                                      </div>
+
+                                   </td>
+
+
+                                   <td class="" data-sebsequentComponent="true">
+                                      <input type="text" class="form-control mb-2 list-priorSanction">
+                                   <!-- </td>
+                                   <td class=""> --> <hr>
+                                      <input type="text" class="form-control mb-2 list-priorSanctionFetched" disabled="true">
+                                   </td>
+
+                                  <!--  <td class="" data-sebsequentComponent="true">
+
+
+                                      <div class="list-priorSanctionFetchedCheckBox"></div>
+                                   </td>
+ -->
+                                     <td class="" data-sebsequentComponent="true">
+
+                                      <div class="list-priorSanctionCheckBox" >
+                                        
+                                        <div class="list-true">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+                                        </div>
+
+                                        <div class="list-false">
+                                        
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-false" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                                        </div>
+
+                                      </div>
+
+                                   </td>
+
+
+
+                                   <td class="" data-sebsequentComponent="true">
+                                      <input type="text" class="form-control mb-2 list-totalExpenditure">
+                                  <!--  </td>
+                                   <td class=""> --> <hr>
+                                      <input type="text" class="form-control mb-2 list-totalExpenditureFetched" disabled="true">
+                                   </td>
+
+                                    <!-- <td class="" data-sebsequentComponent="true">
+                                      <div class="list-totalExpenditureFetchedCheckBox"></div>
+                                   </td> -->
+
+                                     <td class="" data-sebsequentComponent="true">
+
+                                      <div class="list-totalExpenditureCheckBox">
+                                        
+                                        <div class="list-true">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+                                        </div>
+
+                                        <div class="list-false">
+                                        
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="icon match-icon-false" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                                        </div>
+
+                                      </div>
+
+                                   </td>
+
+
+                                   <!-- <div class="col-2 p-20">
+                                      <input type="text" class="form-control mb-2 list-budgetProvisionedCheck tick-input" disabled="true" style="font-weight: 400;border: 0px solid;font-size: 50px;">
+                                   </div> -->
+
+                                    <!-- <td class="" id="subsequent-datapoint-container">
+                                   </td> -->
+
+                                   <td class="" data-sebsequentComponent="true">
+                                      <input type="text" class="form-control mb-2 list-totalRemaining" disabled="true" value="0">
+                                   </td>
+
+
+                                   <td class="">
+
+                                    <div class="row">
+                                        
+                                         <div class="col-2">
+                                          राज्यांश
+                                         </div>
+                                         <div class="col-4">
+                                            <input type="text" class="form-control mb-2 list-demandState">
+                                  
+                                         </div>
+
+                                         <div class="col-2">
+                                          केंद्रांश
+                                         </div>
+
+                                          <div class="col-4">
+                                            <input type="text" class="form-control mb-2 list-demandCentre">
+                                          </div>
+
+
+
+                                          <div class="col-4">
+                                          कुल
+                                         </div>
+                                          <div class="col-8">
+                                           <input type="text" class="form-control mb-2 list-demandTotal" disabled="true" value="0">
+                                        </div>
+
+                                    </div>
+                                   
+                                      
+                                    
+                                     
+                                      
+                                   </td>
+
+                                 
+
+                                  
+                                </tr>
+
+
+
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+
+
+          </main>
+
+          <footer class="modal__footer">
+           <!--  <a href="#" class="btn btn-outline-primary w-20 btn-bold" id="rbiMarkingDone">
+               वापस जायें
+            </a> -->
+
+
+             <button class="modal__close btn btn-outline-primary btn-bold" aria-label="Close modal" data-micromodal-close> चयन  पूर्ण  करें  </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<!-- Modal for RBI XML Check -->
+
+     <div class="modal micromodal-slide" id="rbiContainer" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="rbiContainer-title">
+          <header class="modal__header">
+
+
+            <h2 class="modal__title" id="rbiContainer-title" >
+              कृपया सम्बंधित पत्र (एक / अधिक) चुनें 
+            </h2>
+
+            
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content" id="rbiContainer-content">
+                
+                <div class="row">
+
+               <div class="col-12">
+                                 <div class="card">
+                                    <div class="card-header">
+                                       <h3 class="card-title"></h3>
+                                    </div>
+                                    <div class="table-responsive">
+                                       <table class="table card-table table-vcenter text-nowrap datatable">
+                                          <thead>
+                                             <tr>
+                                                <th class="w-1"></th>
+                                                <th class="inner-table-header">भारत सरकार का विभाग </th>
+                                                <th class="w-1 inner-table-header">पत्र संख्या 
+                                                </th>
+                                                <th class="inner-table-header col-3">योजना</th>
+                                                <th class="inner-table-header">धनराशि (₹ में)</th>
+                                                
+                                                <th style="width: 40%;"></th>
+                                             </tr>
+                                          </thead>
+                                          <tbody id="RBILetterTbody">
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+
+            <div class="col-12" style="margin-top: 20px;">
+<!-- 
+               <button id="rbiMarkingDone" class="btn btn-outline-primary btn-bold close-rbi-modal" data-matched="true"> चयन पूर्ण करें  </button> -->
+
+                   <a id="rbiMarkingDone" class="btn btn-outline-primary btn-bold close-rbi-modal" data-matched="true" aria-label="Close modal" data-micromodal-close> चयन पूर्ण करें  </a>
+
+
+            </div>
+
+          </div>
+          <hr>
+            <div class="row" style="margin-top: 20px;">
+              <!-- Code added by Kavi -->
+              <div class="col-12" style="font-size: 20px;"> अगर उपरोक्त सूचि में पत्र का मिलान नहीं हो पाया है तो नीचे जानकारी भरें   </div>
+
+               <div class="row">  
+
+                 <div class="col-4">
+                                <label class="form-label p-20"> भारत सरकार का विभाग</label>
+                                <input type="text" class="form-control mb-2" id="rbi_letter_department">
+                 </div>
+
+                <div class="col-4">
+                                <label class="form-label p-20"> पत्र संख्या </label>
+                                <input type="text" class="form-control mb-2" id="rbi_letter_number">
+                 </div>
+
+                
+
+                 <div class="col-4">
+                                <label class="form-label p-20"> धनराशि (₹ में)  </label>
+                                <input type="text" class="form-control mb-2" id="rbi_letter_amount">
+                 </div>
+
+
+                </div>
+
+                <div class="col-12">  
+
+                  <button class="modal__close btn btn-outline-primary btn-bold close-rbi-modal" data-matched="false" aria-label="Close modal" data-micromodal-close>  पूर्ण करें  </button>
+
+                </div>
+
+             </div>
+
+           </main>
+
+          
+          
+
+
+          
+
+          <footer class="modal__footer">
+           <!--  <a href="#" class="btn btn-outline-primary w-20 btn-bold" id="rbiMarkingDone">
+               वापस जायें
+            </a> -->
+
+
+            
+          </footer>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div> </div>
+
+
+
+    <div class="modal micromodal-slide" id="termsSelectorContainer" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-4" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="termsSelectorContainer-title">
+          <header class="modal__header">
+
+
+            <h2 class="modal__title" id="modal-conditions-title" style="
+    width: 80%;
+    padding-left: 20%;
+    text-align: center;
+    font-size: 26px;
+
+">
+              अपने संग्रह द्वारा नियम शर्ते चुने
+
+            </h2>
+
+           
+
+
+            <a href="#" class="btn btn-outline-primary w-20 btn-bold" id="appendConditionsToNote">
+               चयन पूर्ण करें 
+            </a>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content" id="termsSelectorContainer-content">
+            <div class="row" style=" ">
+              <div class="col-3 terms-sel-header" style="border-right:  1px solid #e6e8e9; text-decoration: underline;">
+                <h2> संग्रह </h2>
+
+              </div>
+
+              <div class="col-4 terms-sel-header" style="border-right:  1px solid #e6e8e9; text-decoration: underline;">
+                <h2> चिन्हित संग्रह की शर्तें () </h2>
+                <span>(समाहित करने हेतु + दबायें  अथवा drag कर अगले column में drop करें )</span>
+
+                 <span style="margin-top: 10px;">
+                    
+                    <a href="#" class="btn btn-outline-primary w-100 btn-bold" id="add-all-conditions-action">
+                      निम्न सारी शर्तो को चुने 
+                  </a>
+
+                </span>
+
+              </div>
+
+              <div class="col-5 terms-sel-header" style="text-decoration: underline;">
+                 <h2>  नोटिंग में समाहित करने हेतु चिन्हित शर्तें  </h2>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-3 terms-sel-list" style="border-right:  1px solid #e6e8e9;" >
+                
+                <div class="row" id="tS-list-names"> 
+
+                </div>
+
+
+
+              </div>
+              <div class="col-4 terms-sel-list" style="border-right:  1px solid #e6e8e9;">
+              
+              
+                <div class="row" id="tS-list-terms"> 
+                
+              </div>
+              </div>
+              <div class="col-5 terms-sel-list">
+               
+
+                <div class="col-12" id="tS-list-chosen" style="min-height: 200px; padding-bottom: 80px;">
+
+
+                </div>
+                <div class="col-12" style="padding-bottom: 40px;">
+                  <textarea class="form-control" id="add-condition-text" rows="6" placeholder="कोई अन्य नवीन शर्त जोड़ने के लिए यहाँ लिखें "></textarea><br />
+                  <a href="#" class="btn btn-outline-primary w-100 btn-bold" id="add-condition-action">
+                    नियम/शर्त उपरोक्त सूची में जोड़ें 
+                  </a>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+
+          </main>
+          <footer class="modal__footer"  style="
+    text-align: center;
+">
+             <a href="#" class="btn btn-outline-primary w-20 btn-bold" id="appendConditionsToNote">
+               चयन पूर्ण करें 
+            </a>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<!-- Loader -->
+
+
+
+    <!-- UI Libs -->
+    <script src="./tabler/js/tabler.min.js"></script>
+    <script src="./tabler/libs/apexcharts/dist/apexcharts.min.js"></script>
+
+    <!-- Libs -->
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/vendor/hyperhtml-2.34.0.min.js"></script>
+    <script src="js/vendor/formio.full.min.js"></script>
+    <script src="js/vendor/papaparse.min.js"></script>
+    <script src="js/vendor/litepicker.min.js"></script>
+    <script src="js/vendor/micromodal.min.js"></script>
+    <script src="js/vendor/Sortable.min.js"></script>
+    <script src="js/vendor/lodash.js"></script>
+
+
+
+    <script src="js/vendor/kc.js"></script>
+
+    <!-- Data -->
+   <!--  <script src="js/data/testData.js"></script> -->
+    <!-- Comps -->
+    <script src="js/comps/c_header.js"></script>
+    <script src="js/comps/c_user.js"></script>
+    <script src="js/comps/c_generator.js"></script>
+
+    <!-- Customs -->
+
+       <script src="js/auth.js"></script>
+    <script src="js/restLib.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/rest.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/mappingL.js"></script>
+    <script src="js/noteg.js"></script>
+    <script src="js/schemeFinder.js"></script>
+
+    <script src="js/objectComp.js"></script>
+
+
+    <script src="js/termsSelector.js"></script>
+
+    <script src="js/letterChecker.js"></script>
+    <script src="js/draftGen.js"></script>
+
+
+
+
+    <script type="text/javascript">
+      // window.onload = function() {
+      //   Formio.createForm(document.getElementById('userTaskContainer'), 'http://localhost:8888/gsarkar/RMS/app/data/forms/firstinstallment.json');
+      // };
+    </script>
+
+
+
+    <script type='text/javascript'>
+      // function attachEditors() {
+      //   var quill = new Quill('#standardNotingEditor', {
+      //     theme: 'snow'
+      //   });
+      // }
+
+
+      // $(document).ready(function($) {
+      //   userAuth.isLoggedIn();
+      // });
+
+
+
+
+      document.addEventListener('authdone', function(e) {
+        //load Data 
+
+         MicroModal.init();
+
+        handle_subsequent();
+
+        loadSchemeBreakdown();
+
+
+        finYearHandler();
+
+        //populate departments
+        //populateDepartments();
+
+        //populate grants
+        // populateGrant(0)
+
+        //load Scheme Selector
+        schemeSelector("#schemeComponent", "#grantCode");
+
+        //Attach Fetch Budget Event
+        //fetchBudgetEvent();
+
+        handleInstallmentType();
+
+         objTableHandler();
+
+        //Attach display budget event
+        displayBudgetEvent();
+
+        //attach matchBudget Events
+        matchBudgetEvent();
+
+        //Attach datepicker
+        attachDatePicker();
+
+        //draft available event
+        draftAvaialbleEvent();
+
+        //RBI letter Event
+        rbiLetterEvent();
+
+
+        //Object Row Behaviour
+        initObjectComp()
+
+        //project Estimate Events
+        projectEstimateEvents();
+
+
+        //attach note generation event
+        noteGenerationEvent();
+
+
+        //attach clipboard event
+        noteCopyEvent();
+
+
+        //attach Budget calculation events
+        budgetPercentCalculateEvents();
+
+
+        //attach Rich Editors
+        //attachEditors();
+
+
+        //initiate modal
+       
+
+
+
+        fetchTerms();
+      });
+
+
+
+
+
+
+
+
+      function attachDatePicker() {
+        // const picker = new Litepicker({
+        //   element: document.getElementById('RBILetterDate'),
+        //   format: "DD-MM-YYYY"
+        // });
+
+
+        // const picker2 = new Litepicker({
+        //   element: document.getElementById('department_file_date'),
+        //   format: "DD-MM-YYYY"
+        // });
+
+
+
+        // const date3 = new Litepicker({
+        //   element: document.getElementById('department_approval_date'),
+        //   format: "DD-MM-YYYY"
+        // });
+
+      }
+
+
+      // Project Estimate Events
+      function projectEstimateEvents() {
+        var estApp = ["dep", "ew", "pfad", "efc"];
+        var projApp = ["mod", "modfm", "modfmcm", "cabinet"]
+
+
+        //show hide based on type of event
+        $("#typeOfPlanNirmaan").hide();
+
+        $("#typeOfPlan").on("change", function() {
+
+          var selected = $(this).find('option:selected');
+          if ($(selected).attr("data-plantype") == "construction") {
+            $("#typeOfPlanNirmaan").show();
+
+          } else {
+            $("#typeOfPlanNirmaan").hide();
+          }
+        })
+
+
+
+
+        //Project Estimate Approval
+
+        $("#estimateApprovedBy").on("change", function() {
+
+          var estimate = $("#estimateAmount").val();
+          var ew = $("#engineeringWing").val();
+          var estAppBy = null;
+
+
+          console.log(estimate, ew, estAppBy);
+
+          if (estimate <= 500) {
+            estAppBy = "विभाग";
+          } else if (estimate > 500 && estimate < 2500 && ew == "Yes") {
+            estAppBy = "विभाग प्रौद्योगिकी खण्ड";
+          } else if (estimate > 500 && estimate < 2500 && ew == "No") {
+            estAppBy = "PFAD";
+          } else if (estimate >= 2500) {
+            estAppBy = "EFC";
+          }
+          console.log("after", estimate, ew, estAppBy);
+
+          $("#estimateToBeApprovedBy").val(estAppBy);
+
+
+        })
+
+
+
+
+        $("#projectApprovedBy").on("change", function() {
+
+          var estimate = $("#estimateAmount").val();
+          var projAppBy = null;
+
+
+          console.log(estimate, projAppBy);
+
+          if (estimate <= 2500) {
+            projAppBy = "विभाग मंत्री";
+          } else if (estimate > 2500 && estimate <= 10000) {
+            projAppBy = "वित्त मंत्री एवं विभाग मंत्री";
+          } else if (estimate > 10000 && estimate <= 20000) {
+            projAppBy = "मुख्यमंत्री, वित्त मंत्री एवं विभाग मंत्री";
+          } else if (estimate > 20000) {
+            projAppBy = "मंत्रिमंडल";
+          }
+          console.log("after", estimate, projAppBy);
+
+          $("#projectToBeApprovedBy").val(projAppBy);
+
+
+        })
+      }
+
+
+
+
+
+
+
+      function loadTask() {
+
+        fetch('data/forms/firstinstallment.json')
+          .then(response => response.json())
+          .then(formData => {
+            Formio.createForm(document.getElementById('userTaskContainer'), formData)
+              .then(function(form) {
+
+
+                populateDepartments();
+
+                //Budget Events
+                fetchBudgetEvent();
+                matchBudgetEvent();
+
+                //Budget Share Events
+                //budgetShareEvents();
+
+                //Project Estimate Events
+                projectEstimateEvents();
+
+
+
+
+
+
+
+
+
+                return form;
+              })
+              .then(function(form) {
+                form.on('submit', function(submission) {
+                  console.log(submission);
+
+                  var text = generateProposed(submission.data);
+                  $("#generatedText").html(text);
+                  console.log(text);
+
+                });
+              })
+          })
+          .then(data => console.log(data));
+
+      }
+
+
+
+
+
+      function generateNote(fin_generated_num = null) {
+
+
+        // var finyear =$(this).find('option:selected'); 
+
+        var isSubq = check_subsequent();
+
+        var title = `प्रथम किश्त स्वीकृति हेतु टिप्पणी`;
+
+
+        if (isSubq)
+          title = `अनुवर्ती किश्त स्वीकृति हेतु टिप्पणी`;
+
+
+
+        $("#noteTitle").html("");
+        $("#noteTitle").append(title);
+
+
+        var demandType = 'प्रथम किश्त ';
+
+        if (isSubq)
+          demandType = `अनुवर्ती किश्त `;
+
+
+
+        var budgetHeadDetailed =  $("#scheme_major_head").val() + `
+
+           -` + $("#scheme_submajor_head").val() + `
+
+           -` + $("#scheme_minor_head").val() + `
+
+           -` + $("#scheme_sub_detailed_head").val();
+
+        var note = `<p> कृपया प्रशासकीय विभाग  ` + $("#department").val() + ` की टिप्पणी का 
+      अवलोकन करना चाहें, जिसमें निम्नलिखित विवरण अनुसार ` + demandType + ` की स्वीकृति की माँग की गई है:
+ 
+  </p>
+
+<p>
+वित्तीय वर्ष: ` + $("#finyear").val().substring(0, 4) + "-" + $("#finyear").val().substring(4, 9) + ` <br/>
+पत्रावली संख्या: ` + $("#department_file_num").val() + ` <br/>
+अनुदान संख्या: ` + $("#grantCode").val() + ` <br/>
+लेखाशीर्षक: 
+          `+budgetHeadDetailed+`
+            <br/>
+
+योजना का नाम: ` + $("#scheme_sub_detailed_head").val() + ` <br/>
+योजना का वित्त पोषण: केंद्रांश: ` + $("#centralGovernmentSharePercent").val() + ` % , राज्यांश: ` + $("#stateGovernmentSharePercent").val() + ` %  <br/>
+</p>
+  `;
+
+
+        //check for government share percent
+
+        if ($("#centralGovernmentSharePercent").val() != $("#centralGovernmentSharePercentFetched").val()) {
+          note += `<p> बजट डेटाबेस के अनुसार योजना का वित्त पोषण: 
+    केंद्रांश: ` + $("#centralGovernmentSharePercentFetched").val() + ` % , 
+    राज्यांश: ` + $("#stateGovernmentSharePercentFetched").val() + ` %  <br/>
+</p>`;
+        }
+
+
+
+
+        //RBI
+        console.log("markedRBILetters",markedRBILetters);
+
+
+       if(letterMatched == true) {
+        if(markedRBILetters.length > 0){
+          for(var k=0; k<markedRBILetters.length; k++){
+            var statement = generateRBIComment(markedRBILetters[k],letterMatched);
+            console.log("RBI matched", statement);
+            note += statement
+          }
+        }
+      }
+      else if(letterMatched == false){
+        var customMarker = {};
+        customMarker.el = {};
+
+        customMarker.el["Grant"] = $("#rbi_letter_department").val();
+        customMarker.el["SanctionNumber"] = $("#rbi_letter_number").val();
+        customMarker.el["SanctionAmount"] = $("#rbi_letter_amount").val();
+        var statement = generateRBIComment(customMarker,letterMatched);
+            console.log("RBI did not match", statement);
+            note += statement
+
+      }
+
+
+        //check for construction
+
+        var typeOfPlan = $("#typeOfPlan").find('option:selected');
+        if ($(typeOfPlan).attr("data-plantype") == "construction") {
+          note += `<p> प्राक्कलन की लागत: ₹ ` + $("#estimateAmount").val() + ` लाख है, 
+    जो कि ` + $("#estimateApprovedBy").val() + ` द्वारा स्वीकृत है। 
+
+    
+
+    प्राक्कलन की लागत के अनुसार स्वीकृति का सक्षम स्तर ` + $("#estimateToBeApprovedBy").val() + ` है।  <br/><br/></p>`
+        }
+
+
+
+        //Table
+
+        var generatedTable = null;
+
+        if (isSubq)
+          generatedTable = generateTableSubsequent();
+        else
+          generatedTable = generateTableFirst();
+
+
+        var textBeforeTable = `<p> प्रशासनिक विभाग द्वारा अनुदान संख्या `+$("#grantCode").val()+` के अंतर्गत लेखाशीर्षक `+budgetHeadDetailed+` में निम्नलिखित प्रस्ताव प्रेषित किया है: <br/></p>`
+
+
+        note += textBeforeTable
+        note += generatedTable;
+
+
+
+
+
+        //Check for draft
+
+
+        // if ($("#draftCopyAvailable").val() == "No") {
+
+         if($('input[name="draftCopyAvailable"]:checked').val() == "No" ){  
+          note += ` <p> <br/><br/> प्रस्तुत पत्रावली में प्रशासनिक विभाग द्वारा आलेख उपलब्ध नहीं कराया गया है। <br/><br/></p>`
+
+        } else  if($('input[name="draftCopyAvailable"]:checked').val() == "Yes" ){   
+        // } else if ($("#draftCopyAvailable").val() == "Yes") {
+
+
+          //generate number
+          var dNum = fin_generated_num;
+
+          note += ` <p>  <br/><br/> प्रस्तुत पत्रावली में प्रशासनिक विभाग द्वारा आलेख उपलब्ध कराया गया है। प्रस्तुत आलेख ठीक प्रतीत होता है। आलेख हेतु कम्प्यूटर द्वारा उत्पन्न संख्या ` + dNum + ` है। </p>`
+
+        }
+
+        //comments
+        var tippani = $("#comments").val();
+
+        if($("#comments").val().length > 0)
+        note += `<p class="comment-noting">
+      <h3> टिप्पणी</h3>
+      ` + tippani + `</p>`
+
+
+        //Include conditions
+
+        note += `<p> <br/><br/>अतः उपरोक्त प्रस्ताव के सापेक्ष ऊपर बनी तालिका के अंतिम कॉलम में उल्लिखित धनराशि  को निम्नलिखित शर्तों के अधीन स्वीकृत करने पर विचार करना चाहें: <br/> 
+  ` + $("#standardNoting").val().replace(/\n/g,"<br/>") + ` <br/><br/> </p>
+`
+
+        console.log(note);
+
+        $("#noteText").append(note);
+
+
+        var budgetTable = `<p > 
+
+        <table border = "1" class='note-table'>
+          <tbody>
+            <tr>
+              <td> अनुदान संख्या </td>
+              <td> बजट प्राविधान   </td>
+              <td> स्वीकृत धनराशि  </td>
+              <td> अवशेष  </td>
+            </tr>
+            <tr>
+              <td>` + $("#grantCode").val() + ` </td>
+              <td> ` + $("#budgetProvisioned").val() + ` </td>
+              <td>  </td>
+              <td>  </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </p>`
+
+
+        // $("#noteText").append(budgetTable);
+
+
+
+        //insert factual table
+
+        //facts
+
+        //       if($("#schemeCode").val() == null )
+        //         alert("Error: मद का चयन करें !")
+
+        //       var factualTableHTML = `
+
+        // <br/><br/><br/>
+
+        // <h3 style="text-align:center;text-decoration: underline;"> तुलनात्मक तालिका </h3>
+        // <table class="note-factualtable">
+        //   <thead>
+        //     <tr>
+        //       <th>विवरण</th>
+        //       <th>विभाग द्वारा प्रस्तुत दस्तावेजों के आधार पर</th>
+        //       <th>वित्त विभाग या सिस्टम डेटा में उपलब्ध जानकारी के आधार पर</th>
+        //     </tr>
+        //   </thead>
+        //   <tbody>
+        //     <tr>
+        //       <td>अनुदान संख्या</td>
+        //       <td>`+$("#grantCode").val()+`</td>
+        //       <td>`+$("#grantCode").val()+`</td>
+        //     </tr>
+        //     <tr>
+        //       <td>लेखांकन शीर्षक</td>
+        //       <td>`+$("#schemeCode").val().split("-")[0]+`</td>
+        //       <td>`+$("#schemeCode").val().split("-")[0]+`</td>
+        //     </tr>
+        //     <tr>
+        //       <td>लेखांकन शीर्षक का नाम</td>
+        //       <td>`+$("#schemeCode").val().split("-")[1]+`</td>
+        //       <td>`+$("#schemeCode").val().split("-")[1]+`</td>
+        //     </tr>
+        //     <tr>
+        //       <td>केंद्र सरकार की भागीदारी</td>
+        //       <td>`+$("#centralGovernmentSharePercent").val()+`</td>
+        //       <td></td>
+        //     </tr>
+        //     <tr>
+        //       <td>राज्य सरकार की भागीदारी</td>
+        //       <td>`+$("#stateGovernmentSharePercent").val()+`</td>
+        //       <td></td>
+        //     </tr>
+        //     <tr>
+        //       <td>आय व्यय अनुमान की राशि</td>
+        //       <td>`+$("#budgetProvisioned").val()+`</td>
+        //       <td>`+$("#budgetProvisionedFetched").val()+`</td>
+        //     </tr>
+        //     <tr>
+        //       <td>योजना का प्रकार</td>
+        //       <td>`+$("#typeOfPlan").val()+`</td>
+        //       <td></td>
+        //     </tr>
+        //     <tr>
+        //       <td>परियोजना को मंजूरी</td>
+        //       <td>`+$("#projectApprovedBy").val()+`</td>
+        //       <td>`+$("#projectToBeApprovedBy").val()+`</td>
+        //     </tr>
+        //     <tr>
+        //       <td>प्राक्लन राशि</td>
+        //       <td>`+$("#estimateAmount").val()+`</td>
+        //       <td></td>
+        //     </tr>
+        //     <tr>
+        //       <td>प्राक्लन को मंजूरी</td>
+        //       <td>`+$("#estimateApprovedBy").val()+`</td>
+        //       <td>`+$("#estimateToBeApprovedBy").val()+`</td>
+        //     </tr>
+        //     <tr>
+        //       <td>धनराशि अवमुक्त का प्रस्ताव / स्वीकृत</td>
+        //       <td></td>
+        //       <td></td>
+        //     </tr>
+        //     <tr>
+        //       <td>आलेख उपलब्ध है</td>
+        //       <td>`+$("#draftCopyAvailable").val()+`</td>
+        //       <td></td>
+        //     </tr>
+        //   </tbody>
+        // </table>
+
+
+        // `;
+
+        //   $("#noteText").append(factualTableHTML);
+
+
+        //insert tippadi
+
+      //   var tippani = $("#comments").val();
+
+      //   var tippaniHTML = `<p class="comment-noting">
+      // <h3> वित्त विभाग की टिप्पणी</h3>
+      // ` + tippani + `</p>`
+
+      //   //insert niyam shartein
+      //   var noting = $("#standardNoting").val();
+
+      //   var notingHTML = `<br/><br/><p class="note-noting">
+      // <h3> नियम तथा शर्तें </h3>
+      // ` + noting + `</p>`
+
+      //   //$("#noteText").append(notingHTML);
+
+
+
+        
+
+      //   $("#noteText").append(tippaniHTML);
+
+
+        //
+
+
+
+      }
+
+
+      function generateRBIComment(marker,matched){
+
+        var amtIndFormat = numToInd(marker.el["SanctionAmount"]);
+
+        var RBILetterDateF = formatDate($("#RBILetterDate").val());
+
+        var matchDateComment = "";
+        if(matched == false){
+  matchDateComment = `इसकी पुष्टि डेटाबेस द्वारा नहीं हो पाई है।`
+}
+else if(matched == true){
+
+  if(marker.today){
+    var todayDate = today();
+  matchDateComment = `इसकी पुष्टि डेटाबेस द्वारा आज दिनांक `+todayDate+` को कर ली गई है।`
+  }
+  else{
+    matchDateComment = `पूर्व में दिनांक `+marker.date+` को प्रशासनिक विभाग द्वारा प्रेषित पत्रावली संख्या `+marker.filenumber+` प्राप्त होने पर कर ली गई थी।`;
+  }
+}
+
+        var comment = `<p> <br/>प्रशासकीय विभाग द्वारा भारत सरकार के `+marker.el["Grant"]+` मंत्रालय / विभाग के पत्र संख्या `+marker.el["SanctionNumber"]+` , पत्र दिनांक `+RBILetterDateF+` द्वारा ₹ `+amtIndFormat+` की धनराशि का अवमुक्त किया जाना बताया गया है। `+matchDateComment+` <br/></p>
+`;
+
+
+
+
+return comment;
+
+var comment2 = `इसकी पुष्टि <A/B/C> 
+
+A: आज दिनांक <TODAY’S DATE> को कर ली गई है।
+B: पूर्व में दिनांक <EARLIER DATE WHEN IT WAS MATCHED> को प्रशासनिक विभाग द्वारा प्रेषित पत्रावली संख्या <FILE NUMBER OF CONCERNED DEPT> प्राप्त होने पर कर ली गई थी।
+C: डेटाबेस द्वारा नहीं हो पाई है।`
+      }
+
+
+
+      function generateTableFirst() {
+
+
+        var table = ``;
+
+        var tableHeader = `<table class="GeneratedTable note-factualtable">
+  <thead>
+    <tr>
+      <th>मानक मद</th>
+      <th>प्र० विभाग के अनुसार बजट प्रावधान (₹ लाख में)</th>
+      <th>डेटाबेस के अनुसार बजट प्रावधान (₹ लाख में)</th>
+      <th>स्वीकृति हेतु प्रस्तावित धनराशि (₹ लाख में)</th>
+      <th>वित्त विभाग द्वारा प्रस्तावित संस्तुति हेतु धनराशि (₹ लाख में)</th>
+    </tr>
+  </thead>
+  <tbody>`;
+
+
+        var tableRows = ``;
+
+        var numOfRows = $(".budget-row");
+
+        $.each(numOfRows, function(index, el) {
+
+          if($(this).find('.list-demandTotal').val() == 0)
+            return;
+
+          tableRows += `  <tr>
+      <td>` + $(this).find('.list-objectCode').val() + `</td>
+      <td>` + numToInd($(this).find('.list-budgetProvisioned').val()) + `</td>
+      <td>` + numToInd($(this).find('.list-budgetProvisionedFetched').val()) + `</td>
+      <td>` + numToInd((($(this).find('.list-demandTotal').val()))) + `
+
+
+
+      </td>
+      <td> </td>
+    </tr>`;
+
+        });
+
+
+
+        var tableFooter = `
+  </tbody>
+</table> `;
+
+        table = tableHeader + tableRows + tableFooter;
+
+        return table;
+
+
+
+
+
+      }
+
+
+      function generateTableSubsequent() {
+
+
+        var table = ``;
+
+        var tableHeader = `<table class="GeneratedTable note-factualtable">
+  <thead>
+    <tr>
+     <th>मानक मद</th>
+      <th>प्र० विभाग के अनुसार बजट प्रावधान (₹ लाख में)</th>
+      <th>डेटाबेस के अनुसार बजट प्रावधान (₹ लाख में)</th>
+      <th>प्र० विभाग के अनुसार पूर्व में जारी कुल स्वीकृति (₹ लाख में)</th>
+      <th>डेटाबेस के अनुसार पूर्व में जारी कुल स्वीकृति (₹ लाख में)</th>
+      <th>प्र० विभाग के अनुसार कुल व्यय (₹ लाख में)</th>
+      <th>डेटाबेस के अनुसार कुल व्यय (₹ लाख में)</th>
+      <th>डेटाबेस के अनुसार स्वीकृति हेतु उपलब्ध अवशेष धनराशि (₹ लाख में)</th>
+      <th>स्वीकृति हेतु प्रस्तावित धनराशि (₹ लाख में)</th>
+      <th>वित्त विभाग द्वारा प्रस्तावित संस्तुति हेतु धनराशि (₹ लाख में)</th>
+    </tr>
+  </thead>
+  <tbody>`;
+
+
+        var tableRows = ``;
+
+        var numOfRows = $(".budget-row");
+
+        $.each(numOfRows, function(index, el) {
+
+          if($(this).find('.list-demandTotal').val() == 0)
+            return;
+
+
+
+          tableRows += `  <tr>
+      <td>` + $(this).find('.list-objectCode').val() + `</td>
+      <td>` + numToInd($(this).find('.list-budgetProvisioned').val()) + `</td>
+      <td>` + numToInd($(this).find('.list-budgetProvisionedFetched').val()) + `</td>
+
+      <td>` + numToInd($(this).find('.list-priorSanction').val()) + `</td>
+      <td>` + numToInd($(this).find('.list-priorSanctionFetched').val()) + `</td>
+
+      <td>` + numToInd($(this).find('.list-totalExpenditure').val()) + `</td>
+      <td>` + numToInd($(this).find('.list-totalExpenditureFetched').val()) + `</td>
+
+      <td>` + numToInd($(this).find('.list-totalRemaining').val()) + `</td>
+
+      <td>` + numToInd((($(this).find('.list-demandTotal').val()))) + `
+
+
+
+      </td>
+      <td></td>
+    </tr>`;
+
+        });
+
+
+
+        var tableFooter = `
+  </tbody>
+</table> `;
+
+        table = tableHeader + tableRows + tableFooter;
+
+        return table;
+
+
+
+
+
+      }
+    </script>
+
+  </body>
+
+</html>
